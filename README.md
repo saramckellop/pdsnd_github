@@ -2,7 +2,7 @@
 January 8th, 2020
 
 ### Project Title
-Udacity Bikeshare Python Project
+Udacity Bikeshare Python Project - Sara McKellop
 
 ### Description
 This project analyzes US bikeshare data by calculating statistics and data sets from three different cities.
