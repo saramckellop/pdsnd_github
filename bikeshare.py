@@ -78,7 +78,7 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel; including 
+    """Displays statistics on the most frequent times of travel; including
        the most popular start month by index number,
        the most popular start day of the week and
        the most popular start hour.
@@ -99,7 +99,7 @@ def time_stats(df):
     popular_day = df['day'].mode()
     print('Most popular Start Day:', popular_day)
 
- 
+
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['hour'] = df['Start Time'].dt.hour
     popular_hour = df['hour'].mode()
@@ -111,7 +111,7 @@ print('-'*40)
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip
-       by delineating the most commonly used start station, 
+       by delineating the most commonly used start station,
        the most commonly used end station and the most
        frequent combination of start and end station trips.
        """
@@ -127,7 +127,7 @@ def station_stats(df):
     end_stations = df['End Station'].mode()[0]
     print('The count of the most commonly used End Station is:',end_stations)
 
- 
+
     most_frequent_combo = df[['Start Station', 'End Station']].mode().loc[0]
     print('The most frequent combination of start and end stations is: {} & {}.'.format(most_frequent_combo[0], most_frequent_combo[1]))
 
@@ -144,7 +144,7 @@ def trip_duration_stats(df):
 
     total_travel_time = df['Trip Duration'].sum()
     print(total_travel_time)
-   
+
     mean_travel_time = df['Trip Duration'].mean()
     print(mean_travel_time)
 
@@ -202,7 +202,7 @@ def display_data(df):
     raw_data = input('Would you like to analyze 5 more rows of data? \nType yes or no.').lower()
     index1 = 0
     index2 = 5
-    
+
     while True:
         if raw_data == 'yes':
             print(df[df.columns[0: ]].iloc[index1:index2])
@@ -214,8 +214,11 @@ def display_data(df):
         else:
             break
 
-            
+
 def main():
+    """ Allows the user to choose to restart the project or to end the project.
+    """
+
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
@@ -225,12 +228,11 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         display_data(df)
-        
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
            break
-        
+
 
 if __name__ == "__main__":
 	main()
-    
