@@ -97,7 +97,7 @@ def time_stats(df):
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['day'] = df['Start Time'].dt.day
     popular_day = df['day'].mode()
-    print('Most popular Start Day:', popular_day)
+    print('{} is the most popular Start Day.'.format(popular_day))
 
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
