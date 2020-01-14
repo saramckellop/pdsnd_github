@@ -1,15 +1,15 @@
 ### Date created
-Include the date you created this project and README file.
+January 8th, 2020
 
 ### Project Title
-Replace the Project Title
+Udacity Bikeshare Python Project
 
 ### Description
-Describe what your project is about and what it does
+This project analyzes US bikeshare data by calculating statistics and data sets from three different cities.
 
 ### Files used
-Include the files used
+bikeshare.py
+Bikeshare.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Thank you to all of the students/mentors on the Student Hub of Udacity for their continued support.
