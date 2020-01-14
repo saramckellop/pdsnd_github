@@ -91,7 +91,7 @@ def time_stats(df):
     df['Start Date'] = pd.to_datetime(df['Start Time'])
     df['month'] = df['Start Time'].dt.month
     popular_month = df['month'].mode()[0]
-    print('Most popular Start Month:', popular_month)
+    print('{} is the most popular Start Month.'.format(popular_month))
 
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
