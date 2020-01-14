@@ -13,3 +13,4 @@ Bikeshare.csv
 
 ### Credits
 Thank you to all of the students/mentors on the Student Hub of Udacity for their continued support.
+https://knowledge.udacity.com/?nanodegree=c104469e-9f2b-11e8-af91-57d8eb30db69
